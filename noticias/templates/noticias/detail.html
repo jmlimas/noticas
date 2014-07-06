@@ -1,0 +1,19 @@
+{% include "noticias/base.html" %}
+
+{% block main_content %}
+
+<div class="container">
+    <div class="row">
+        <div class="span4">{{ noticia.pub_date }}</div>
+        <div class="span8"><b>{{ noticia.title }}</b></div>
+    </div>
+    <div class="row">
+        <div class="span4"><i>{{ noticia.rubric }}</i></div>
+        <div class="span8">{{ noticia.author }}</div>
+    </div>
+    <div class="row">
+        <div class="span12">{{ noticia.body }}</div>
+    </div>
+</div>
+
+{% endblock main_content %}

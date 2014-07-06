@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    {% block title %}
+    <title>{% block subtitle %}{% endblock subtitle %}Noticias. Django CBV Example</title>
+    {% endblock title %}
+
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="{{STATIC_URL}}css/main.css" rel="stylesheet" type="text/css" />
+
+
+    <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.js"></script>
+
+</head>
+<body>
+
+{% include "noticias/navigation.html" %}
+
+{% block main_content %}
+{% endblock main_content %}
+
+<debug></debug>
+</body>
+</html>

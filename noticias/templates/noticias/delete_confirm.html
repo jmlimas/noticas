@@ -1,0 +1,14 @@
+{% include "noticias/base.html" %}
+
+{% block main_content %}
+
+<div class="container">
+<form method="post" action="">{% csrf_token %}
+    <div class="row">
+        <div class="span3"><a href="{% url noticias %}" class="btn btn-danger">Cancel</a></div>
+        <div class="span3"><button type="submit" class="btn btn-success">Yes, I'm sure</button></div>
+    </div>
+</form>
+</div>
+
+{% endblock main_content %}

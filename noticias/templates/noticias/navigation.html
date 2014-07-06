@@ -1,0 +1,67 @@
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <a href="{% url 'noticias_index' %}" class="brand project-title navigation-link">Página principal</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="{% url 'noticias' %}" class="navigation-link">
+                            <i class="icon-list icon-white"></i> Lista de noticias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'create_noticia' %}" class="navigation-link">
+                            <i class="icon-plus icon-white"></i> Crear una noticia
+                        </a>
+                    </li>
+
+                    <li class="divider-vertical"></li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Otros <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'noticias_de_cine' %}" class="navigation-link">
+                                    Noticias de cine
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'noticias_paginated' %}" class="navigation-link">
+                                    Noticias paginated list
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'noticias_de_deporte' %}" class="navigation-link">
+                                    Noticias de deporte
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'rubrica' "cine" %}" class="navigation-link">
+                                    Rubrica "Cine"
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contactenos' %}" class="navigation-link">
+                                    Contactenos (FormView)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'noticias_json' %}" class="navigation-link">
+                                    Noticias JSON Mixin
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                    </li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+
+        </div>
+    </div><!-- /navbar-inner -->
+</div>

@@ -1,0 +1,50 @@
+{% include "noticias/base.html" %}
+
+{% block main_content %}
+
+<div class="container">
+
+    <table class="table table-striped">
+        <tbody>
+            {% for noticia in noticias %}
+            <tr>
+                <td>{{ noticia.pub_date }}</td>
+                <td>{{ noticia.title }}</td>
+                <td>{{ noticia.rubric }}</td>
+                <td>
+                    <a class="btn btn-small" href="{% url 'noticia' noticia.pk %}">
+                        <i class="icon-eye-open"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-small" href="{% url 'update_noticia' noticia.pk %}">
+                        <i class="icon-pencil"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-small" href="{% url 'delete_noticia' noticia.pk %}">
+                        <i class="icon-trash"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+     {% if paginator.num_pages > 1 %}
+    <div class="pagination">
+        <ul>
+            {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}">Prev</a></li>
+            {% endif %}
+            <li><a href="#">Pagina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</a></li>
+            {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}">Next</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock main_content %}

@@ -1,0 +1,16 @@
+{% include "noticias/base.html" %}
+
+{% block main_content %}
+
+<div class="container">
+    <div class="row">
+        <div class="span4"><b>Title:</b></div>
+        <div class="span8">{{ object.title }}</div>
+    </div>
+    <div class="row">
+        <div class="span4"><b>Slug:</b></div>
+        <div class="span8">{{ object.slug }}</div>
+    </div>
+</div>
+
+{% endblock main_content %}

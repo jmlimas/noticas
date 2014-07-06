@@ -1,0 +1,17 @@
+{% include "noticias/base.html" %}
+
+{% block main_content %}
+
+<div class="container">
+    <form method="post" action="">{% csrf_token %}
+        <div class="row">
+            <div class="span12">{{ form }}</div>
+        </div>
+
+        <div class="row">
+            <div class="span12"><button type="submit" class="btn btn-success">Save</button></div>
+        </div>
+    </form>
+</div>
+
+{% endblock main_content %}

@@ -1,0 +1,21 @@
+{% include "noticias/base.html" %}
+
+{% block main_content %}
+
+<div class="container">
+
+    <table class="table table-striped">
+        <tbody>
+            {% for deporte in deportes %}
+            <tr>
+                <td>{{ deporte.pub_date }}</td>
+                <td>{{ deporte.title }}</td>
+                <td>{{ deporte.rubric }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock main_content %}
